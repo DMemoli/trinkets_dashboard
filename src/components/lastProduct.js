@@ -24,7 +24,7 @@ componentDidMount() {
 
 render(){
 	
-	let productURL = "http://localhost:3030/detail/"+this.state.productsList.id
+	let productURL = "http://localhost:3030/product/detail/"+this.state.productsList.id
 	
 	
 	return (
