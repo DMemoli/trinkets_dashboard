@@ -1,77 +1,78 @@
-import React, {Component} from "react"
+import React, { Component } from "react"
 import SmallCard from "./SmallCard"
-    
+
 class ContentRowStats extends Component {
-    constructor(){
+    constructor() {
         super()
         this.state = {
 
-        productsList : [],
-        userList: []
+            productsList: [],
+            userList: []
 
         }
     }
 
 
-componentDidMount(){
+    componentDidMount() {
 
-    Promise.all([
-        fetch('http://localhost:3030/api/products/'),
-        fetch('http://localhost:3030/api/users/')
-    ])
+        Promise.all([
+            fetch('http://localhost:3030/api/products/'),
+            fetch('http://localhost:3030/api/users/')
+        ])
 
-    .then(([res1, res2]) => Promise.all([res1.json(), res2.json()]))   
-    
-    .then(([data1, data2]) => this.setState({
-        productsList: data1, 
-        userList: data2
-        
-    }))
-    .catch(error => console.log(error))
+            .then(([res1, res2]) => Promise.all([res1.json(), res2.json()]))
+
+            .then(([data1, data2]) => this.setState({
+                productsList: data1,
+                userList: data2
+
+            }))
+            .catch(error => console.log(error))
     }
-    
-    render(){
-        
+
+    render() {
+
         let totalProducts = {
 
             title: 'Total de productos',
             color: 'primary',
             icon: 'fa-chart-area',
             quantity: this.state.productsList.count
-        
+
         }
-        
+
         let totalCat = {
-        
+
             title: 'Total de categorias',
             color: 'success',
             icon: 'fa-folder',
             quantity: this.state.productsList.countTotalCat
         }
-        
+
         let totalUser = {
             title: 'Cantidad de Usuario',
             color: 'warning',
             icon: 'fa-user',
             quantity: this.state.userList.count
         }
-        
-        
+
+
         let cartProps = [totalProducts, totalCat, totalUser]
 
-    return (
+        return (
 
-        <div className="row">
+            <div className="row">
 
-        {cartProps.map( (movie, i) => {
+                {cartProps.map((movie, i) => {
 
-            return <SmallCard {...movie} key={i}/>
+                    return <SmallCard {...movie} key={i} />
 
-        })}
+                })}
 
-        </div>
-    )}
-  
+            </div>
+        )
+    }
+
 }
 
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import ContentRowStats from './ContentRowStats';
-import LastMovieInDb from './LastMovieInDb';
+import LastProduct from './lastProduct';
 import GenresInDb from './GenresInDb';
 import MoviesInDb from './MoviesInDb';
 
@@ -16,7 +16,7 @@ function ContentRowTop(){
 			
 					<ContentRowStats />
 					<div className='row'>
-						<LastMovieInDb />
+						<LastProduct />
 						<GenresInDb />
 					</div>
 					<MoviesInDb />
