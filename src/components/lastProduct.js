@@ -24,8 +24,10 @@ componentDidMount() {
 
 render(){
 	
-	let productURL = "http://localhost:3030/product/detail/"+this.state.productsList.id
-	
+	let productURL = "http://localhost:3030/product/detail/"+this.state.productsList.id;
+	// LLego hasta imagen. No llego hasta el nombre.
+	// let imgURL = "http://localhost:3030/img/products/"+this.state.productsList.images[0].name;
+	let imgURL = "http://localhost:3030/img/products/"+this.state.productsList.images;
 	
 	return (
 		<>
@@ -38,7 +40,7 @@ render(){
 					</div>
 					<div className="card-body">
 						<div className="text-center">
-								<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: 40 + 'rem' }} src={this.state.productsList.imageURL} alt={this.state.productsList.name} />
+								<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: 40 + 'rem' }} src={imgURL} alt={this.state.productsList.name} />
 							</div>
 						<p>{this.state.productsList.description}</p>
 						<a className="btn btn-danger" target="_blank" rel="nofollow" href={productURL} >Detalle del producto</a>
