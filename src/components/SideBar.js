@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../assets/images/logo-DH.png';
+import image from '../assets/images/logo/trinKets - logo tras sin baseline.png';
 import {Route, Routes, Link} from 'react-router-dom'
 
 
@@ -36,7 +36,7 @@ function SideBar(){
                 <li className="nav-item active">
                     <Link className="nav-link" to="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard - DH movies</span>
+                        <span>Dashboard - Trinkets</span>
                     </Link>
                 </li>
 
