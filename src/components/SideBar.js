@@ -8,6 +8,7 @@ import {Route, Routes, Link} from 'react-router-dom'
 import Error404 from './Error404';
 import MoviesInDb from './MoviesInDb';
 import ContentRowStats from './ContentRowStats';
+import ContentRowStats2 from './ContentRowStats2';
 import ContentRowStats3 from './ContentRowStats3';
 import CategoriesDetail from './CategoriesDetail';
 import ContentWrapper from './ContentWrapper';
@@ -80,7 +81,7 @@ function SideBar(){
     <Routes>
           
         <Route path="/" element = {<ContentWrapper />} />
-        <Route path="/stats" element = {<div className='col-8'> <ContentRowStats /></div>} />
+        <Route path="/stats" element = {<div className='col-8'> <ContentRowStats /><ContentRowStats2 /><ContentRowStats3 /></div>} />
         <Route path="/categories" element =  {<div className='col-8'> <ContentRowStats3 /></div>} />
         <Route path="/lastproduct" element = {<LastProduct />} />
         <Route path="/table" element = {<MoviesInDb />} />
