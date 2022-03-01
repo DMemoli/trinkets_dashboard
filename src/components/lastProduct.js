@@ -23,11 +23,13 @@ componentDidMount() {
 
 
 render(){
+	console.log(this.state.productsList);
 	
 	let productURL = "http://localhost:3030/product/detail/"+this.state.productsList.id;
 	// LLego hasta imagen. No llego hasta el nombre.
 	// let imgURL = "http://localhost:3030/img/products/"+this.state.productsList.images[0].name;
-	let imgURL = "http://localhost:3030/img/products/"+this.state.productsList.images;
+	let imgURL = "http://localhost:3030/img/products/"+this.state.productsList.image;
+	// let imgURL = this.state.productsList.imageURL
 	
 	return (
 		<>
