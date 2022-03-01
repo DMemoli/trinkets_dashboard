@@ -14,13 +14,13 @@ class GenresInDb extends Component {
 
     componentDidMount(){
 
-        fetch("http://localhost:3000/api/genres")
+        fetch('http://localhost:3030/api/products/')
         
         .then(res=>res.json())
         
         .then(genres =>{
             console.log(genres)
-            this.setState({genresList: genres.data})
+            this.setState({genresList: genres.products})
         })
         .catch(error => console.log(error))
 

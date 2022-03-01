@@ -46,7 +46,7 @@ class ContentRowStats extends Component {
             title: 'Total de categorias',
             color: 'success',
             icon: 'fa-folder',
-            quantity: this.state.productsList.countTotalCat
+            quantity: this.state.productsList.categoriesLength
         }
 
         let totalUser = {
@@ -56,6 +56,9 @@ class ContentRowStats extends Component {
             quantity: this.state.userList.count
         }
 
+        if(this.state.productsList.categories == undefined) {
+            this.state.productsList.categories = 'Cargando...'
+        }
 
         let cartProps = [totalProducts, totalCat, totalUser]
 
