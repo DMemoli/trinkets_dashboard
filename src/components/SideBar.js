@@ -8,7 +8,6 @@ import {Route, Routes, Link} from 'react-router-dom'
 import Error404 from './Error404';
 import MoviesInDb from './MoviesInDb';
 import ContentRowStats from './ContentRowStats';
-import ContentRowStats2 from './ContentRowStats2';
 import ContentRowStats3 from './ContentRowStats3';
 import CategoriesDetail from './CategoriesDetail';
 import ContentWrapper from './ContentWrapper';
@@ -38,7 +37,7 @@ function SideBar(){
                 <li className="nav-item active">
                     <Link className="nav-link" to="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard - Trinkets</span>
+                        <span>Dashboard - trinKets</span>
                     </Link>
                 </li>
 
@@ -49,7 +48,7 @@ function SideBar(){
                 <li className="nav-item">
                      <Link className="nav-link collapsed" to="/stats">
                         <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Stats</span>
+                        <span>Estadísticas</span>
                     </Link>
                     
                 </li>
@@ -59,7 +58,7 @@ function SideBar(){
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item">
                     <a className="nav-link" href="/lastproduct">
-                        <i className="fas fa-fw fa-table"></i>
+                        <i className="fas fa-fw fa-box"></i>
                         <span>Último Producto</span></a>
                 </li>
 
@@ -67,7 +66,7 @@ function SideBar(){
                  <li className="nav-item">
                     <a className="nav-link" href="/table">
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Tables</span></a>
+                        <span>Productos publicados</span></a>
                 </li>
 
                 {/*<!-- Divider -->*/}
@@ -80,7 +79,8 @@ function SideBar(){
     <Routes>
           
         <Route path="/" element = {<ContentWrapper />} />
-        <Route path="/stats" element = {<div className='col-8'> <ContentRowStats /><ContentRowStats2 /><ContentRowStats3 /></div>} />
+        <Route path="/stats" element = {<div className='col-8'> <ContentRowStats /></div>} />
+        <Route path="/categories" element =  {<div className='col-8'> <ContentRowStats3 /></div>} />
         <Route path="/lastproduct" element = {<LastProduct />} />
         <Route path="/table" element = {<MoviesInDb />} />
         <Route path="/categories/:id" element = {<CategoriesDetail />} />
