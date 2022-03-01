@@ -4,19 +4,15 @@ import ContentRowTop from './ContentRowTop';
 import Footer from './Footer';
 import { useParams } from 'react-router-dom';
 import Cookies from 'js-cookie';
-function ContentWrapper(){
-    let id = useParams()
-    if(id.id&&id.id!='logout'){
-        let vencimiento = 1/96
-        Cookies.set('User', id.id, { expires: vencimiento } )
-        console.log(id.id)
-        console.log(Cookies.get())
-    }
+function Logout(){
+    
+    Cookies.remove('User')
+    
     return (
         <React.Fragment>
-            {/*<!-- Content Wrapper -->*/}
+            
             <div id="content-wrapper" className="d-flex flex-column">
-                {/*<!-- Main Content -->*/}
+                
                 <div id="content">
                     <TopBar />
                     <ContentRowTop />
@@ -26,4 +22,4 @@ function ContentWrapper(){
         </React.Fragment>
     )
 }
-export default ContentWrapper;
+export default Logout;

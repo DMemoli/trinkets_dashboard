@@ -13,6 +13,7 @@ import CategoriesDetail from './CategoriesDetail';
 import ContentWrapper from './ContentWrapper';
 import SearchMovies from './SearchMovies';
 import LastProduct from './lastProduct';
+import Logout from './Logout';
 
 
 
@@ -85,6 +86,7 @@ function SideBar(){
         <Route path="/table" element = {<MoviesInDb />} />
         <Route path="/categories/:id" element = {<CategoriesDetail />} />
         <Route path="/search" element = {<SearchMovies />} />
+        <Route path='/logout' element= {<Logout />} />
         <Route path='/:id' element= {<ContentWrapper />} />
         <Route path='*' element= {<Error404 />} />
 
