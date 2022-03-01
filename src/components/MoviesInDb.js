@@ -15,13 +15,13 @@ class MoviesInDb extends Component {
 
     componentDidMount(){
 
-        fetch("http://localhost:3000/api/movies")
+        fetch('http://localhost:3030/api/products/')
         
         .then(res=>res.json())
         
         .then(movies =>{
             console.log(movies)
-            this.setState({moviesList: movies.data})
+            this.setState({moviesList: movies.products})
         })
         .catch(error => console.log(error))
 
@@ -39,11 +39,9 @@ class MoviesInDb extends Component {
                     <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
                         <thead>
                             <tr>
-                                <th>Título</th>
-                                <th>Duración</th>
-                                <th>Rating</th>
-                                <th>Género</th>
-                                <th>Premios</th>
+                                <th>Producto</th>
+                                <th>Vendedor/a</th>
+                                <th>Categoria</th>
                             </tr>
                         </thead>
                        
