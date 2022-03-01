@@ -20,7 +20,7 @@ function ContentRowTop(){
 						<LastProduct />
 						<GenresInDb />
 					</div>
-					{/* <MoviesInDb /> */}
+					<MoviesInDb />
 
 				</div>
 

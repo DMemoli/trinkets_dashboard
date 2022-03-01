@@ -20,7 +20,7 @@ class GenresInDb extends Component {
         
         .then(genres =>{
             console.log(genres)
-            this.setState({genresList: genres.products})
+            this.setState({genresList: genres.categories})
         })
         .catch(error => console.log(error))
 

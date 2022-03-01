@@ -40,8 +40,7 @@ class MoviesInDb extends Component {
                         <thead>
                             <tr>
                                 <th>Producto</th>
-                                <th>De</th>
-                                <th>--</th>
+                                <th>Vendedor/a</th>
                                 <th>Categoria</th>
                             </tr>
                         </thead>

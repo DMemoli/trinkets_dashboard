@@ -69,6 +69,13 @@ function SideBar(){
                         <span>Último Producto</span></a>
                 </li>
 
+                 {/*<!-- Nav Item - Tables -->*/}
+                 <li className="nav-item">
+                    <a className="nav-link" href="/table">
+                        <i className="fas fa-fw fa-table"></i>
+                        <span>Tables</span></a>
+                </li>
+
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider d-none d-md-block"/>
             </ul>
@@ -82,6 +89,7 @@ function SideBar(){
         <Route path="/stats" element = {<div className='col-8'> <ContentRowStats /></div>} />
         <Route path="/categories" element =  {<GenresInDb />} />
         <Route path="/lastproduct" element = {<LastProduct />} />
+        <Route path="/table" element = {<MoviesInDb />} />
         <Route path="/categories/:id" element = {<CategoriesDetail />} />
         <Route path="/search" element = {<SearchMovies />} />
         <Route path='*' element= {<Error404 />} />
