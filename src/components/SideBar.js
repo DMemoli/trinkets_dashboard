@@ -12,6 +12,7 @@ import ContentRowStats from './ContentRowStats';
 import CategoriesDetail from './CategoriesDetail';
 import ContentWrapper from './ContentWrapper';
 import SearchMovies from './SearchMovies';
+import LastProduct from './lastProduct';
 
 
 
@@ -56,25 +57,18 @@ function SideBar(){
                 <li className="nav-item">
                     <Link className="nav-link" to="/categories">
                         <i className="fas fa-fw fa-folder"></i>
-                        <span>Categories</span>
+                        <span>Categorías</span>
                     </Link>
                 </li>
                 
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item">
-                    <a className="nav-link" href="/table">
+                    <a className="nav-link" href="/lastproduct">
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Tables</span></a>
+                        <span>Último Producto</span></a>
                 </li>
 
-                {/*<!-- Nav Item - Tables -->*/}
-                <li className="nav-item nav-link">
-                    <Link className="nav-link" to="/SearchMovies">
-                        <i className="fas fa-search"></i>
-                        <span>Search a movie</span>
-                    </Link>
-                </li>
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider d-none d-md-block"/>
             </ul>
@@ -87,7 +81,7 @@ function SideBar(){
         <Route path="/" element = {<ContentWrapper />} />
         <Route path="/stats" element = {<div className='col-8'> <ContentRowStats /></div>} />
         <Route path="/categories" element =  {<GenresInDb />} />
-        <Route path="/table" element = {<MoviesInDb />} />
+        <Route path="/lastproduct" element = {<LastProduct />} />
         <Route path="/categories/:id" element = {<CategoriesDetail />} />
         <Route path="/search" element = {<SearchMovies />} />
         <Route path='*' element= {<Error404 />} />
