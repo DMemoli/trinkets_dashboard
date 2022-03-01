@@ -90,9 +90,7 @@ function SideBar(){
         <Route path="/table" element = {<MoviesInDb />} />
         <Route path="/categories/:id" element = {<CategoriesDetail />} />
         <Route path="/search" element = {<SearchMovies />} />
-
-
-          {/*<Route path='*' element= {<Error404 />} /> */}
+        <Route path='*' element= {<Error404 />} />
 
     </Routes>
 
