@@ -22,10 +22,10 @@ function ContentRowTop(){
 					<ContentRowStats3 />
 					<div className='row'>
 						<LastProduct />
-						<GenresInDb />
+						{/* <GenresInDb /> */}
+						<MoviesInDb />
 					</div>
-					<MoviesInDb />
-
+					
 				</div>
 
 

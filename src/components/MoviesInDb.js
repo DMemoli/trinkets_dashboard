@@ -33,8 +33,12 @@ class MoviesInDb extends Component {
         return (
   
         /* <!-- DataTales Example --> */
-        <div className="card shadow mb-4">
-            <div className="card-body">
+        <div className="card shadow col-lg-6 mb-4">
+           
+            <div className="card-header py-3">
+						<h5 className="m-0 font-weight-bold text-gray-800">Lista de productos: </h5>
+					</div>
+                    <div className="card-body">
                 <div className="table-responsive">
                     <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
                         <thead>
