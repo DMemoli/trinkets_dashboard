@@ -46,7 +46,7 @@ class ContentRowStats extends Component {
             title: 'Total de categorias',
             color: 'secondary',
             icon: 'fa-folder',
-            quantity: this.state.productsList.countTotalCat
+            quantity: this.state.productsList.count
         }
 
         let totalUser = {
