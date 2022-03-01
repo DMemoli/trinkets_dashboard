@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import SmallCard from "./SmallCard"
 
-class ContentRowStats extends Component {
+class ContentRowStats2 extends Component {
     constructor() {
         super()
         this.state = {
@@ -34,26 +34,26 @@ class ContentRowStats extends Component {
 
         let totalProducts = {
 
-            title: 'Total de productos',
-            color: 'primary',
-            icon: 'fa-chart-area',
-            quantity: this.state.productsList.count
+            title: 'Precio más alto',
+            color: 'success',
+            icon: 'fa-arrow-up',
+            quantity: "$25.000"
 
         }
 
         let totalCat = {
 
-            title: 'Total de categorias',
-            color: 'secondary',
-            icon: 'fa-folder',
-            quantity: this.state.productsList.countTotalCat
+            title: 'Precio más bajo',
+            color: 'danger',
+            icon: 'fa-arrow-down',
+            quantity: "$200"
         }
 
         let totalUser = {
-            title: 'Cantidad de Usuario',
-            color: 'warning',
-            icon: 'fa-user',
-            quantity: this.state.userList.count
+            title: 'Precio promedio',
+            color: 'info',
+            icon: 'fa-equals',
+            quantity: "$1.500"
         }
 
 
@@ -76,4 +76,4 @@ class ContentRowStats extends Component {
 }
 
 
-export default ContentRowStats; 
+export default ContentRowStats2; 
