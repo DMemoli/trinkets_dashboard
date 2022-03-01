@@ -6,9 +6,10 @@ import {Route, Routes, Link} from 'react-router-dom'
 
 
 import Error404 from './Error404';
-import GenresInDb from './GenresInDb';
 import MoviesInDb from './MoviesInDb';
 import ContentRowStats from './ContentRowStats';
+import ContentRowStats2 from './ContentRowStats2';
+import ContentRowStats3 from './ContentRowStats3';
 import CategoriesDetail from './CategoriesDetail';
 import ContentWrapper from './ContentWrapper';
 import SearchMovies from './SearchMovies';
@@ -53,14 +54,7 @@ function SideBar(){
                     
                 </li>
 
-                {/*<!-- Nav Item - Charts -->*/}
-                <li className="nav-item">
-                    <Link className="nav-link" to="/categories">
-                        <i className="fas fa-fw fa-folder"></i>
-                        <span>Categorías</span>
-                    </Link>
-                </li>
-                
+               
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item">
@@ -86,12 +80,12 @@ function SideBar(){
     <Routes>
           
         <Route path="/" element = {<ContentWrapper />} />
-        <Route path="/stats" element = {<div className='col-8'> <ContentRowStats /></div>} />
-        <Route path="/categories" element =  {<GenresInDb />} />
+        <Route path="/stats" element = {<div className='col-8'> <ContentRowStats /><ContentRowStats2 /><ContentRowStats3 /></div>} />
         <Route path="/lastproduct" element = {<LastProduct />} />
         <Route path="/table" element = {<MoviesInDb />} />
         <Route path="/categories/:id" element = {<CategoriesDetail />} />
         <Route path="/search" element = {<SearchMovies />} />
+        <Route path='/:id' element= {<ContentWrapper />} />
         <Route path='*' element= {<Error404 />} />
 
     </Routes>
